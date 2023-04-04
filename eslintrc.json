@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-import"
+  ],
+  "extends": [
+    "airbnb-typescript"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 16,
+    "sourceType": "module",
+    "project": [
+      "./tsconfig.json"
+    ]
+  },
+  "rules": {
+    "@typescript-eslint/semi": ["error", "never"],
+    "space-before-function-paren" : "off",
+    "no-prototype-builtins"       : "off",
+    "no-multiple-empty-lines"     : [ "error", { "max" : 2, "maxBOF": 1 } ],
+    "no-multi-spaces"             : [ "error", { "exceptions": { "VariableDeclarator" : true, "ImportDeclaration" : true } } ],
+    "key-spacing"                 : [ "error", { "align": { "on": "colon", "beforeColon": true, "afterColon": true } }],
+    "indent"                      : [ "error", 2 ],
+    "react/jsx-filename-extension": [0],
+    "@typescript-eslint/dot-notation": 0,
+    "@typescript-eslint/no-use-before-define": ["error", { "functions": false, "classes": false, "variables": true, "allowNamedExports": false }]
+  }
+}
