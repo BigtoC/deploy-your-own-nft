@@ -13,7 +13,10 @@
     "deploy:goerli": "npm run compile && npm run hardhat:goerli -- deploy:NFT",
     "deploy:mumbai": "npm run compile && npm run hardhat:mumbai -- deploy:NFT",
     "deploy:polygon": "npm run compile && npm run hardhat:polygon -- deploy:NFT",
-    "store:Metadata": "npm run hardhat -- store:Metadata"
+    "store:Metadata": "npm run hardhat -- store:Metadata",
+    "mint:goerli": "npm run compile && npm run hardhat:goerli -- mint:NFT",
+    "mint:mumbai": "npm run compile && npm run hardhat:mumbai -- mint:NFT",
+    "mint:polygon": "npm run compile && npm run hardhat:polygon -- mint:NFT"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.2.2",
