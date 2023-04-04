@@ -1,6 +1,7 @@
-import fs from 'fs';
+import fs from "fs";
+import path from "path"
 
-export function updateNftInfo(key: string, value: any, filePath: string = "../assets/nft-info.json") {
+export function updateNftInfo(key: string, value: any, filePath: string = path.join(__dirname, '..', 'assets', "nft-info.json")) {
     // Parse the JSON data into an object
     const json = readNftInfo(filePath)
 
@@ -16,7 +17,7 @@ export function updateNftInfo(key: string, value: any, filePath: string = "../as
     console.log(`Updated file [${filePath}], {${key}: ${value}`)
 }
 
-export function readNftInfo(filePath: string = "../assets/nft-info.json") {
+export function readNftInfo(filePath: string = path.join(__dirname, '..', 'assets', "nft-info.json")) {
     // Read the existing JSON file
     const data = fs.readFileSync(filePath, 'utf-8');
 
