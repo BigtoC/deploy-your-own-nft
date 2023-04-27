@@ -33,5 +33,5 @@ npm run mint:mumbai
 ```
 If you want to mint multiple NFTs:
 ```shell
-hardhat --network PolygonMumbai -- mint:NFT --number 3
+hardhat --network PolygonMumbai mint:NFT --number 2
 ```
